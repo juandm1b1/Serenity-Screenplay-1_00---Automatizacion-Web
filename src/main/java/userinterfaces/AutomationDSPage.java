@@ -19,29 +19,30 @@ public class AutomationDSPage extends PageObject {
     public static final Target PHONE_INPUT = Target.the("Phone input")
             .located(By.xpath("//input[@type='tel']"));
 
-    public static Target genderRadiobutton(String gender){
-        return Target.the("Gender radiobutton").located(By.xpath("//input[@type='radio' and @value='"+ gender +"']"));
-    }
-    //°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|
-    public static Target hobbyCheckbox(String strHobby) {
-        return Target.the("Hobby checkbox").located(By.xpath("//input[@type='checkbox' and @value='"+ strHobby +"']"));
-    }
-//              ----------------------------------------------------------
-    public static final Target LANGUAGES_DIV = Target.the("Lenguages div")
+    public static final Target GENDER_RADIOBUTTON = Target.the("Gender radiobutton")
+            .locatedBy("//input[@type='radio' and @value='{0}']");
+    public static final Target HOBBY_CHECKBOX = Target.the("Hobby checkbox")
+            .locatedBy("//input[@type='checkbox' and @value='{0}']");
+
+    public static final Target LANGUAGES_DIV = Target.the("Languages div")
             .located(By.id("msdd"));
-    public static Target languageOption(String language){
-        return Target.the("Especific lenguage option").locatedBy("//li[@class='ng-scope']//a[text()='"+ language +"']");
-    }
-//              ----------------------------------------------------------
-    public static Target skillOption(String strSkills) {
-        return Target.the("Select the specified skill").locatedBy("//select[@id='Skills']/option[@value='"+ strSkills +"']");
-    }
+    public static final Target LANGUAGE_OPTION = Target.the("Specific language option")
+            .locatedBy("//li[@class='ng-scope']//a[text()='{0}']");
+
+    public static final Target SKILL_OPTION = Target.the("Select the specified skill")
+            .locatedBy("//select[@id='Skills']/option[@value='{0}']");
+
+    public static final Target COUNTRIES_REQUIRED = Target.the("Select Countries with no options")
+            .locatedBy("#countries");
+
+    public static Target COUNTRIES_REQUIRED_OPTION = Target.the("Option Select Country")
+            .locatedBy("//select[@id='countries']/option[contains(text(),'Select Country')]");
+
     public static final Target SELECT_COUNTRY_DIV = Target.the("Select country select")
             .located(By.xpath("//div[@class='col-md-4 col-xs-4 col-sm-4']"));
-    public static Target selectCountryOption(String country){
-        return Target.the("Select Denmark country option").located(By.xpath("//option[@value='"+ country +"']"));
-    }
-//              ----------------------------------------------------------
+    public static final Target SELECT_COUNTRY_OPTION = Target.the("Select an specific country option")
+            .locatedBy("//option[@value='{0}']");
+
     public static final Target SELECT_YEAR = Target.the("Select year")
             .located(By.id("yearbox"));
     public static final Target SELECT_MONTH = Target.the("Select month")
@@ -54,10 +55,13 @@ public class AutomationDSPage extends PageObject {
             .located(By.id("secondpassword"));
     public static final Target SUBMIT_BUTTON = Target.the("Submit button")
             .located(By.id("submitbtn"));
-//              ----------------------------------------------------------
+
     public static final Target ADD_INS = Target.the("Add intercepting click")
             .located(By.xpath("//ins[@class='ee']"));
-//              ----------------------------------------------------------
+
+    public static final Target IMG_UPLOAD = Target.the("For uploading a photo")
+            .located(By.id("imagesrc"));
+
     public static final Target MESSAGE = Target.the("Welcome message")
-            .located(By.xpath("h3"));
+            .located(By.xpath("//h4[contains(text(),' - Double Click on Edit Icon to ')]"));
 }

@@ -30,8 +30,8 @@ public class ADSStepDefinitions {
         OnStage.theActorInTheSpotlight().attemptsTo(Registration.signUp(automationDemoSiteRegData));
     }
 
-    @Then("^he verifies the message$")
-    public void heVerifiesTheMessage(List<AutomationDemoSiteRegData> automationDemoSiteRegData) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(automationDemoSiteRegData.get(0).getStrMessage())));
+    @Then("^he verifies the message (.*)$")
+    public void heVerifiesTheMessage(String message) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(message)));
     }
 }

@@ -6,6 +6,7 @@ public class AutomationDemoSiteRegData {
     private String strAddress;
     private String strEmail;
     private String strPhone;
+    private String strImgName;
     private String strGender;
     private String strHobbies;
     private String strLanguages;
@@ -58,12 +59,28 @@ public class AutomationDemoSiteRegData {
         this.strPhone = strPhone;
     }
 
+    public String getStrImgName() {
+        return strImgName;
+    }
+
+    public void setStrImgName(String strImgName) {
+        this.strImgName = strImgName;
+    }
+
     public String getStrGender() {
         return strGender;
     }
 
+    public void setStrGender(String strGender) {
+        this.strGender = strGender;
+    }
+
     public String getStrHobbies() {
         return strHobbies;
+    }
+
+    public void setStrHobbies(String strHobbies) {
+        this.strHobbies = strHobbies;
     }
 
     public String getStrLanguages() {
@@ -132,5 +149,9 @@ public class AutomationDemoSiteRegData {
 
     public String getStrMessage() {
         return strMessage;
+    }
+
+    public void setStrMessage(String strMessage) {
+        this.strMessage = strMessage;
     }
 }
